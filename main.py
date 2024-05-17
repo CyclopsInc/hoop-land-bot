@@ -28,6 +28,6 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def on_ready():
     print(f'We have logged in as {bot.user}')
 
-@bot.command()
-async def hello(ctx):
-    await ctx.send('Hello!')
+print("Starting the bot...")
+keep_alive()
+bot.run(os.getenv('TOKEN'))
